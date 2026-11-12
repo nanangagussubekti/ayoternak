@@ -3,626 +3,1127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UU No. 20 Tahun 2001 — Pemberantasan Tindak Pidana Korupsi</title>
+<title>Program Pelatihan Ternak Ayam Petelur – Pak Gundul Farm</title>
+<!-- ===== FACEBOOK PIXEL ===== -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1479363486720586&ev=PageView&noscript=1"/></noscript>
+<!-- ===== END FACEBOOK PIXEL ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0f172a; --card:#1e293b; --card2:#273449;
-    --accent:#38bdf8; --accent2:#fbbf24; --danger:#f87171;
-    --text:#e2e8f0; --muted:#94a3b8; --border:#334155;
-    --green:#34d399; --purple:#a78bfa;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
-    background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 100%);
-    color:var(--text); line-height:1.65; min-height:100vh;
-  }
-  header{
-    background:linear-gradient(90deg,#1e3a8a,#7c3aed);
-    padding:28px 20px; text-align:center;
-    border-bottom:3px solid var(--accent);
-    box-shadow:0 4px 20px rgba(0,0,0,.4);
-  }
-  header h1{font-size:1.5rem;margin-bottom:6px}
-  header p{color:#cbd5e1;font-size:.9rem}
-  .badge{
-    display:inline-block;background:var(--accent2);color:#000;
-    padding:2px 10px;border-radius:12px;font-size:.75rem;font-weight:700;
-    margin-top:8px;
-  }
-  .container{max-width:1100px;margin:0 auto;padding:20px}
-  /* Search */
-  .search-box{
-    display:flex;gap:10px;margin:20px 0;flex-wrap:wrap;
-  }
-  .search-box input{
-    flex:1;min-width:200px;padding:12px 16px;border-radius:10px;
-    border:1px solid var(--border);background:var(--card);color:var(--text);
-    font-size:1rem;outline:none;
-  }
-  .search-box input:focus{border-color:var(--accent)}
-  /* Tabs */
-  .tabs{
-    display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;
-    position:sticky;top:0;background:rgba(15,23,42,.95);
-    padding:10px 0;z-index:10;backdrop-filter:blur(6px);
-  }
-  .tab-btn{
-    padding:10px 16px;border-radius:8px;border:1px solid var(--border);
-    background:var(--card);color:var(--muted);cursor:pointer;
-    font-size:.85rem;font-weight:600;transition:.2s;
-  }
-  .tab-btn:hover{border-color:var(--accent);color:var(--text)}
-  .tab-btn.active{
-    background:linear-gradient(90deg,#2563eb,#7c3aed);
-    color:#fff;border-color:transparent;
-  }
-  .panel{display:none;animation:fade .3s ease}
-  .panel.active{display:block}
-  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-  /* Cards */
-  .card{
-    background:var(--card);border:1px solid var(--border);
-    border-radius:14px;padding:20px;margin-bottom:16px;
-    box-shadow:0 2px 10px rgba(0,0,0,.2);
-  }
-  .card h3{
-    color:var(--accent);margin-bottom:10px;font-size:1.1rem;
-    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
-  }
-  .card h3 .pasal{
-    background:var(--accent);color:#000;padding:2px 10px;
-    border-radius:6px;font-size:.8rem;font-weight:800;
-  }
-  .card p{margin-bottom:8px;color:#cbd5e1}
-  .card ul{margin:8px 0 8px 22px;color:#cbd5e1}
-  .card li{margin-bottom:6px}
-  .highlight{color:var(--accent2);font-weight:700}
-  .danger{color:var(--danger);font-weight:700}
-  .green{color:var(--green);font-weight:700}
-  .purple{color:var(--purple);font-weight:700}
-  /* Grid */
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-  /* Table */
-  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.88rem}
-  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border)}
-  th{background:#0b1220;color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:.5px}
-  tr:hover td{background:rgba(56,189,248,.05)}
-  /* Pill */
-  .pill{
-    display:inline-block;padding:3px 10px;border-radius:20px;
-    font-size:.72rem;font-weight:700;margin:2px 2px 2px 0;
-  }
-  .pill.blue{background:#1e3a8a;color:#93c5fd}
-  .pill.gold{background:#78350f;color:#fcd34d}
-  .pill.red{background:#7f1d1d;color:#fca5a5}
-  .pill.green{background:#064e3b;color:#6ee7b7}
-  .pill.purple{background:#4c1d95;color:#c4b5fd}
-  /* Flow */
-  .flow{display:flex;flex-direction:column;gap:0}
-  .flow-step{
-    display:flex;gap:14px;align-items:flex-start;position:relative;
-    padding-bottom:18px;
-  }
-  .flow-step:not(:last-child)::before{
-    content:'';position:absolute;left:17px;top:36px;bottom:0;
-    width:2px;background:var(--border);
-  }
-  .flow-num{
-    flex-shrink:0;width:36px;height:36px;border-radius:50%;
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
-    display:flex;align-items:center;justify-content:center;
-    font-weight:800;font-size:.9rem;color:#fff;
-  }
-  .flow-content{flex:1}
-  .flow-content h4{color:var(--accent);font-size:.98rem;margin-bottom:4px}
-  .flow-content p{font-size:.87rem;color:var(--muted)}
-  /* Note */
-  .note{
-    background:rgba(251,191,36,.08);border-left:4px solid var(--accent2);
-    padding:12px 16px;border-radius:8px;margin:12px 0;font-size:.88rem;
-  }
-  .note.danger{background:rgba(248,113,113,.08);border-left-color:var(--danger)}
-  .note.green{background:rgba(52,211,153,.08);border-left-color:var(--green)}
-  /* Stat */
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:16px 0}
-  .stat{
-    background:var(--card2);border-radius:12px;padding:16px;text-align:center;
-    border:1px solid var(--border);
-  }
-  .stat .num{font-size:1.6rem;font-weight:800;color:var(--accent)}
-  .stat .lbl{font-size:.75rem;color:var(--muted);margin-top:4px}
-  /* Footer */
-  footer{
-    text-align:center;padding:24px;color:var(--muted);
-    font-size:.8rem;border-top:1px solid var(--border);margin-top:30px;
-  }
-  /* No result */
-  .no-result{text-align:center;padding:40px;color:var(--muted);display:none}
-  /* Print */
-  @media print{
-    body{background:#fff;color:#000}
-    .tabs,.search-box{display:none}
-    .panel{display:block!important}
-    .card{border:1px solid #ccc;background:#fff}
-  }
-  @media(max-width:600px){
-    header h1{font-size:1.15rem}
-    .container{padding:12px}
-  }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0e0c08;
+  --ink2:#1e1a10;
+  --gold:#c8900a;
+  --gold-lt:#fef5e0;
+  --gold-mid:#e8a820;
+  --gold-pale:#fffaee;
+  --green:#174f25;
+  --green-mid:#236633;
+  --green-lt:#e3f0e8;
+  --red:#7a1515;
+  --red-lt:#fbe8e8;
+  --cream:#faf7f0;
+  --warm:#fffdf8;
+  --paper:#f5f0e8;
+  --muted:#6b5a38;
+  --border:#e0d4b8;
+  --f-head:'Bebas Neue',sans-serif;
+  --f-serif:'Cormorant Garamond',serif;
+  --f-body:'Mulish',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--f-body);background:var(--cream);color:var(--ink);line-height:1.7;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--green);border-radius:10px}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.025'/%3E%3C/svg%3E");
+  opacity:.5;
+}
+/* ══ HERO ══ */
+.hero{
+  background:var(--ink);
+  min-height:100svh;
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  position:relative;overflow:hidden;
+}
+.hero-bg-photo{
+  position:absolute;inset:0;z-index:0;
+  background-image:url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=compress&cs=tinysrgb&w=1400');
+  background-size:cover;
+  background-position:center 45%;
+  animation:heroZoom 9s ease-out forwards;
+}
+@keyframes heroZoom{from{transform:scale(1.07)}to{transform:scale(1)}}
+.hero-bg-photo::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(105deg,rgba(10,8,4,.90) 0%,rgba(10,8,4,.72) 45%,rgba(10,8,4,.45) 75%,rgba(10,8,4,.30) 100%);
+}
+.hero::before{
+  content:'';position:absolute;z-index:1;
+  width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,144,10,.10) 0%,transparent 65%);
+  top:-200px;right:-200px;pointer-events:none;
+}
+.hero::after{
+  content:'';position:absolute;z-index:1;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(23,79,37,.20) 0%,transparent 65%);
+  bottom:-100px;left:-100px;pointer-events:none;
+}
+.nav{
+  position:relative;z-index:3;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.5rem 2rem;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.nav-brand{font-family:var(--f-head);font-size:20px;letter-spacing:.08em;color:rgba(255,255,255,.9)}
+.nav-brand span{color:var(--gold-mid)}
+.nav-link{
+  font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);text-decoration:none;
+  border:1px solid rgba(255,255,255,.15);padding:7px 18px;border-radius:100px;
+  transition:all .2s;
+}
+.nav-link:hover{color:#fff;border-color:rgba(255,255,255,.4)}
+.hero-body{
+  position:relative;z-index:3;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:3rem 2rem;max-width:720px;margin:0 auto;width:100%;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold-mid);margin-bottom:1.5rem;animation:fadeUp .6s .1s both;
+}
+.hero-kicker::before{content:'';width:32px;height:1px;background:var(--gold-mid)}
+.hero h1{
+  font-family:var(--f-head);
+  font-size:clamp(52px,10vw,96px);
+  line-height:.95;letter-spacing:.03em;color:#fff;
+  margin-bottom:1rem;animation:fadeUp .6s .2s both;
+}
+.hero h1 .outline{-webkit-text-stroke:2px rgba(255,255,255,.35);color:transparent}
+.hero h1 .gold{color:var(--gold-mid)}
+.hero-sub{
+  font-family:var(--f-serif);font-size:clamp(16px,2.5vw,20px);
+  font-style:italic;color:rgba(255,255,255,.55);
+  max-width:520px;margin-bottom:2.5rem;line-height:1.6;
+  animation:fadeUp .6s .35s both;
+}
+.hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:2.5rem;animation:fadeUp .6s .45s both}
+.hero-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.7);font-size:12px;font-weight:500;
+  padding:6px 14px;border-radius:100px;
+}
+.hero-pill.green{background:rgba(23,79,37,.4);border-color:rgba(35,102,51,.5);color:#7dcf8e}
+.hero-pill.gold{background:rgba(200,144,10,.2);border-color:rgba(200,144,10,.35);color:var(--gold-mid)}
+.hero-pill.red{background:rgba(122,21,21,.35);border-color:rgba(180,40,40,.4);color:#e08080}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;animation:fadeUp .6s .55s both}
+.hero-foot{
+  position:relative;z-index:3;
+  padding:1.25rem 2rem;
+  border-top:1px solid rgba(255,255,255,.07);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;
+}
+.hero-foot-txt{font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.05em}
+.hero-foot-link{
+  font-size:12px;color:rgba(255,255,255,.4);text-decoration:none;
+  display:flex;align-items:center;gap:6px;transition:color .2s;
+}
+.hero-foot-link:hover{color:var(--gold-mid)}
+/* ══ BUTTONS ══ */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;border-radius:10px;
+  font-size:14px;font-weight:600;letter-spacing:.03em;
+  cursor:pointer;text-decoration:none;border:none;transition:all .2s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#fff;box-shadow:0 6px 22px rgba(200,144,10,.4)}
+.btn-gold:hover{box-shadow:0 10px 30px rgba(200,144,10,.55)}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 6px 22px rgba(23,79,37,.35)}
+.btn-green:hover{box-shadow:0 10px 30px rgba(23,79,37,.5)}
+.btn-outline{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.25)}
+.btn-outline:hover{border-color:rgba(255,255,255,.5)}
+.btn-outline-dark{background:transparent;color:var(--green);border:1.5px solid var(--green)}
+.btn-white{background:#fff;color:var(--green);box-shadow:0 4px 14px rgba(0,0,0,.12)}
+/* ══ WRAPPER ══ */
+.lp{max-width:740px;margin:0 auto;padding:0 1.25rem 5rem}
+.sec{padding:4rem 0;border-bottom:1px solid var(--border)}
+.sec:last-child{border-bottom:none}
+.label{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:1rem;
+}
+.label::before{content:'';width:20px;height:2px;border-radius:1px}
+.label-gold{color:var(--gold)}.label-gold::before{background:var(--gold)}
+.label-green{color:var(--green)}.label-green::before{background:var(--green)}
+.label-red{color:var(--red)}.label-red::before{background:var(--red)}
+.sec-h{
+  font-family:var(--f-head);
+  font-size:clamp(30px,5vw,46px);
+  line-height:1.05;letter-spacing:.04em;
+  color:var(--ink);margin-bottom:.6rem;
+}
+.sec-sub{
+  font-family:var(--f-serif);font-size:17px;font-style:italic;
+  color:var(--muted);margin-bottom:1.75rem;line-height:1.65;max-width:560px;
+}
+/* ══ FOTO HERO NARASUMBER ══ */
+.narrator-hero{
+  width:100%;border-radius:20px;overflow:hidden;
+  margin-bottom:1.5rem;position:relative;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;background:var(--ink);min-height:320px;
+}
+@media(max-width:560px){.narrator-hero{grid-template-columns:1fr}}
+.narrator-photo{
+  width:100%;height:100%;min-height:280px;
+  object-fit:cover;display:block;
+}
+.narrator-info{
+  padding:2rem 1.75rem;display:flex;flex-direction:column;justify-content:center;gap:12px;
+}
+.narrator-name{font-family:var(--f-head);font-size:28px;letter-spacing:.05em;color:#fff;line-height:1.05}
+.narrator-role{
+  display:inline-block;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  background:rgba(200,144,10,.2);color:var(--gold-mid);
+  border:1px solid rgba(200,144,10,.25);
+  padding:4px 14px;border-radius:100px;
+}
+.narrator-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+.nstat{background:rgba(255,255,255,.07);border-radius:10px;padding:.7rem .9rem;text-align:center}
+.nstat-num{font-family:var(--f-head);font-size:22px;color:var(--gold-mid);line-height:1}
+.nstat-lbl{font-size:11px;color:rgba(255,255,255,.45);line-height:1.4;margin-top:2px}
+.narrator-bio{font-size:13px;color:rgba(255,255,255,.6);line-height:1.7}
+/* ══ FOTO KANDANG GRID ══ */
+.photo-grid{
+  display:grid;grid-template-columns:2fr 1fr;
+  grid-template-rows:180px 180px;gap:10px;
+  margin-bottom:2rem;border-radius:16px;overflow:hidden;
+}
+@media(max-width:500px){.photo-grid{grid-template-columns:1fr;grid-template-rows:200px 140px 140px}}
+.pg-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.pg-img:hover{transform:scale(1.04)}
+.pg-main{grid-row:1/3}
+/* ══ CARD FREE ══ */
+.card-free{
+  background:var(--green-lt);
+  border:1.5px solid #b8d8c0;border-radius:20px;overflow:hidden;
+  margin-bottom:1.5rem;display:grid;grid-template-columns:1fr 2.5fr;
+  transition:all .28s;
+}
+@media(max-width:540px){.card-free{grid-template-columns:1fr}}
+.card-free:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(23,79,37,.15)}
+.card-free-side{
+  background:var(--green);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:2rem 1rem;gap:12px;
+}
+.card-free-num{font-family:var(--f-head);font-size:72px;line-height:1;color:rgba(255,255,255,.15)}
+.card-free-icon{font-size:36px}
+.card-free-tag{
+  font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  background:rgba(255,255,255,.15);color:rgba(255,255,255,.8);
+  padding:4px 12px;border-radius:100px;
+}
+.card-free-body{padding:2rem 1.75rem}
+.card-free-body h2{font-family:var(--f-head);font-size:clamp(22px,3.5vw,32px);letter-spacing:.04em;color:var(--green);margin-bottom:.5rem}
+.card-free-body p{font-size:14px;color:#2a4a30;line-height:1.7;margin-bottom:1.5rem}
+.card-free-features{list-style:none;margin-bottom:1.5rem}
+.card-free-features li{
+  font-size:13px;color:#2a4a30;
+  padding:5px 0 5px 22px;position:relative;
+  border-bottom:1px solid rgba(23,79,37,.1);
+}
+.card-free-features li:last-child{border-bottom:none}
+.card-free-features li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
+/* ══ CARD ONLINE (UTAMA) ══ */
+.card-online{
+  background:var(--ink);border-radius:20px;overflow:hidden;
+  margin-bottom:1.5rem;position:relative;transition:all .28s;
+  border:2px solid rgba(200,144,10,.3);
+}
+.card-online:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(0,0,0,.3)}
+.card-online-glow{
+  position:absolute;top:-60px;right:-60px;
+  width:260px;height:260px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,144,10,.18),transparent 65%);
+  pointer-events:none;
+}
+/* photo strip in online card */
+.card-online-photos{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  height:160px;overflow:hidden;
+}
+.card-online-photos img{width:100%;height:100%;object-fit:cover;display:block}
+.card-online-photos-overlay{
+  position:relative;
+}
+.card-online-photos-overlay::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom, transparent 40%, var(--ink) 100%);
+}
+.card-online-top{
+  padding:1.5rem 2rem 1rem;
+  display:flex;align-items:flex-start;justify-content:space-between;gap:16px;
+  position:relative;z-index:1;
+}
+.card-online-badge{
+  font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  background:rgba(200,144,10,.2);color:var(--gold-mid);
+  border:1px solid rgba(200,144,10,.3);
+  padding:5px 14px;border-radius:100px;flex-shrink:0;
+}
+.card-online-top h2{font-family:var(--f-head);font-size:clamp(24px,4vw,36px);letter-spacing:.04em;color:#fff;line-height:1.05}
+.card-online-body{padding:0 2rem 2rem;position:relative;z-index:1}
+.card-online-body p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:1.25rem}
+/* price */
+.price-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:.5rem}
+.price-original{font-family:var(--f-serif);font-size:18px;color:rgba(255,255,255,.3);text-decoration:line-through}
+.price-badge{background:#c0392b;color:#fff;font-size:11px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:100px}
+.price-current{font-family:var(--f-head);font-size:clamp(32px,5vw,44px);letter-spacing:.04em;color:var(--gold-mid);line-height:1;margin-bottom:1.25rem}
+/* countdown — ke hari Minggu terdekat */
+.cd-wrap{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;
+}
+.cd-label{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.7rem;display:flex;align-items:center;gap:6px}
+.cd-label::before{content:'⏳'}
+.cd-boxes{display:flex;align-items:center;gap:8px}
+.cd-box{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;padding:.5rem .9rem;text-align:center;min-width:56px;
+}
+.cd-num{font-family:var(--f-head);font-size:28px;letter-spacing:.04em;color:var(--gold-mid);line-height:1;display:block}
+.cd-unit{font-size:9px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.08em}
+.cd-sep{font-size:22px;color:rgba(255,255,255,.25);font-weight:700;margin-bottom:4px}
+/* bonus */
+.bonus-box{
+  background:rgba(200,144,10,.1);border:1px solid rgba(200,144,10,.25);
+  border-radius:10px;padding:.9rem 1.1rem;
+  display:flex;gap:10px;align-items:flex-start;margin-bottom:1.5rem;
+}
+.bonus-box p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.55}
+.bonus-box strong{color:var(--gold-mid)}
+.card-online-features{list-style:none;margin-bottom:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+@media(max-width:460px){.card-online-features{grid-template-columns:1fr}}
+.card-online-features li{font-size:13px;color:rgba(255,255,255,.55);padding:5px 0 5px 18px;position:relative}
+.card-online-features li::before{content:'›';position:absolute;left:0;color:var(--gold-mid);font-weight:700;font-size:16px}
+/* silabus accordion */
+.silabus-wrap{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;margin-bottom:1.5rem;overflow:hidden;
+}
+.silabus-toggle{
+  width:100%;background:none;border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 1.1rem;
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.45);
+  transition:color .2s;
+}
+.silabus-toggle:hover{color:var(--gold-mid)}
+.silabus-toggle-icon{font-size:16px;transition:transform .3s}
+.silabus-toggle.open .silabus-toggle-icon{transform:rotate(180deg)}
+.silabus-toggle.open{color:var(--gold-mid)}
+.silabus-body{display:none;padding:.25rem 0 .75rem}
+.silabus-body.open{display:block}
+.silabus-item{
+  display:flex;gap:10px;align-items:flex-start;
+  padding:.55rem 1.1rem;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.silabus-item:last-child{border-bottom:none}
+.silabus-num{
+  font-family:var(--f-head);font-size:11px;letter-spacing:.06em;
+  color:var(--gold-mid);flex-shrink:0;min-width:28px;margin-top:2px;
+}
+.silabus-text{font-size:13px;color:rgba(255,255,255,.6);line-height:1.55}
+.silabus-text strong{color:rgba(255,255,255,.85)}
+/* ══ CARD OFFLINE ══ */
+.card-offline{
+  background:var(--paper);border:1.5px solid #d8c8a0;
+  border-radius:20px;overflow:hidden;margin-bottom:1.5rem;
+  transition:all .28s;
+}
+.card-offline:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(122,21,21,.12)}
+.card-offline-body{padding:2rem 1.75rem}
+.card-offline-body h2{font-family:var(--f-head);font-size:clamp(22px,3.5vw,32px);letter-spacing:.04em;color:var(--red);margin-bottom:.5rem}
+.card-offline-body p{font-size:14px;color:#4a2a2a;line-height:1.7;margin-bottom:1.25rem}
+.card-offline-features{list-style:none;margin-bottom:1.5rem}
+.card-offline-features li{
+  font-size:13px;color:#4a2a2a;
+  padding:5px 0 5px 22px;position:relative;
+  border-bottom:1px solid rgba(122,21,21,.1);
+}
+.card-offline-features li:last-child{border-bottom:none}
+.card-offline-features li::before{content:'✓';position:absolute;left:0;color:var(--red);font-weight:700}
+/* offline price */
+.offline-price-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:.25rem}
+.offline-price-ori{font-family:var(--f-serif);font-size:16px;color:#a08060;text-decoration:line-through}
+.offline-price-badge{background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:100px}
+.offline-price-current{font-family:var(--f-head);font-size:32px;letter-spacing:.04em;color:var(--red);line-height:1;margin-bottom:1.25rem}
+/* offline countdown */
+.cd-wrap-light{
+  background:#fff;border:1.5px solid #e0c8a0;border-radius:12px;
+  padding:1rem 1.25rem;margin-bottom:1.25rem;
+}
+.cd-label-light{font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.7rem;display:flex;align-items:center;gap:6px}
+.cd-label-light::before{content:'📅'}
+.cd-boxes-light{display:flex;align-items:center;gap:8px}
+.cd-box-light{
+  background:var(--paper);border:1px solid #d8c8a0;
+  border-radius:10px;padding:.5rem .9rem;text-align:center;min-width:56px;
+}
+.cd-num-light{font-family:var(--f-head);font-size:28px;letter-spacing:.04em;color:var(--red);line-height:1;display:block}
+.cd-unit-light{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.cd-sep-light{font-size:22px;color:#c8a880;font-weight:700;margin-bottom:4px}
+/* bonus offline */
+.bonus-box-light{
+  background:#fff7ee;border:1px solid #e8c890;
+  border-radius:10px;padding:.9rem 1.1rem;
+  display:flex;gap:10px;align-items:flex-start;margin-bottom:1.25rem;
+}
+.bonus-box-light p{font-size:13px;color:#4a2a2a;line-height:1.55}
+.bonus-box-light strong{color:var(--gold)}
+/* maps embed */
+.maps-wrap{
+  width:100%;border-radius:12px;overflow:hidden;
+  border:1.5px solid #d8c8a0;margin-bottom:1.25rem;
+}
+.maps-wrap iframe{display:block;width:100%;height:240px;border:none}
+/* sched box */
+.sched-box{background:#fff;border:1.5px solid #e0c8a0;border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.25rem}
+.sched-box h4{font-family:var(--f-head);font-size:14px;letter-spacing:.06em;color:var(--red);margin-bottom:.7rem}
+.sched-row{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:.4rem 0;border-bottom:1px solid #eee}
+.sched-row:last-child{border-bottom:none}
+.sched-row span:first-child{color:var(--muted)}
+.sched-row span:last-child{font-weight:600;color:var(--ink);text-align:right}
+/* ══ FOTO SECTION (kandang) ══ */
+.farm-photos{
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;
+  gap:10px;border-radius:16px;overflow:hidden;margin-bottom:1.5rem;
+}
+@media(max-width:480px){.farm-photos{grid-template-columns:1fr;grid-template-rows:repeat(4,160px)}}
+.farm-photo{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.farm-photo:hover{transform:scale(1.04)}
+.farm-photo-tall{grid-row:1/3}
+/* ══ COMPARISON TABLE ══ */
+.comp-table{width:100%;border-collapse:collapse;margin-top:1.5rem}
+.comp-table th{
+  font-family:var(--f-head);font-size:13px;letter-spacing:.06em;
+  background:var(--ink);color:#fff;padding:12px 14px;text-align:left;
+}
+.comp-table th:first-child{border-radius:12px 0 0 0}
+.comp-table th:last-child{border-radius:0 12px 0 0}
+.comp-table td{padding:11px 14px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);background:var(--warm)}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table tr:last-child td:first-child{border-radius:0 0 0 12px}
+.comp-table tr:last-child td:last-child{border-radius:0 0 12px 0}
+.comp-table td:first-child{font-weight:500;color:var(--ink)}
+.tick-green{color:var(--green);font-weight:700}
+.tick-gold{color:var(--gold);font-weight:700}
+.tick-red{color:var(--red);font-weight:700}
+.cross{color:#ccc}
+/* ══ PROFILE ══ */
+.profile-wrap{
+  background:var(--ink2);color:#fff;
+  border-radius:20px;padding:0;
+  position:relative;overflow:hidden;
+}
+.profile-photo-strip{
+  width:100%;height:260px;object-fit:cover;object-position:center top;
+  display:block;
+}
+.profile-content{
+  padding:2rem;
+  display:grid;grid-template-columns:80px 1fr;gap:20px;
+}
+@media(max-width:460px){.profile-content{grid-template-columns:1fr}}
+.profile-wrap::before{
+  content:'';position:absolute;top:-50px;right:-50px;
+  width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,144,10,.1),transparent 65%);
+}
+.pav{
+  width:72px;height:72px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--green),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--f-head);font-size:22px;letter-spacing:.04em;color:#fff;
+}
+.pname{font-family:var(--f-head);font-size:22px;letter-spacing:.05em;color:#fff;margin-bottom:3px}
+.prole{
+  display:inline-block;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  background:rgba(200,144,10,.2);color:var(--gold-mid);
+  border:1px solid rgba(200,144,10,.25);
+  padding:3px 12px;border-radius:100px;margin-bottom:12px;
+}
+.pbio{font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.7}
+.profile-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+  padding:0 2rem 2rem;
+}
+.p-stat{background:rgba(255,255,255,.06);border-radius:10px;padding:.8rem;text-align:center}
+.p-stat-num{font-family:var(--f-head);font-size:22px;color:var(--gold-mid);line-height:1}
+.p-stat-lbl{font-size:11px;color:rgba(255,255,255,.4);line-height:1.4;margin-top:2px}
+/* ══ FINAL CTA ══ */
+.final{
+  text-align:center;padding:3.5rem 1.5rem;
+  background:linear-gradient(135deg,var(--green) 0%,#0b2e12 100%);
+  border-radius:22px;margin-top:3.5rem;position:relative;overflow:hidden;
+}
+.final::before{
+  content:'';position:absolute;
+  width:350px;height:350px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,144,10,.15),transparent 65%);
+  top:-100px;right:-80px;pointer-events:none;
+}
+.final h2{font-family:var(--f-head);font-size:clamp(26px,5vw,42px);letter-spacing:.05em;color:#fff;margin-bottom:.75rem}
+.final p{font-family:var(--f-serif);font-size:16px;font-style:italic;color:rgba(255,255,255,.6);margin-bottom:2rem}
+.final-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+/* ══ SOCIAL PROOF POPUP ══ */
+.sp-popup{
+  position:fixed;bottom:24px;left:20px;z-index:9999;
+  max-width:300px;width:calc(100vw - 40px);
+  background:#fff;border-radius:14px;
+  box-shadow:0 8px 32px rgba(0,0,0,.18);
+  padding:14px 36px 14px 14px;
+  display:flex;align-items:center;gap:11px;
+  transform:translateY(120px);opacity:0;
+  transition:transform .45s cubic-bezier(.34,1.56,.64,1),opacity .35s ease;
+  pointer-events:none;
+  border-left:4px solid var(--green);
+}
+.sp-popup.sp-show{transform:translateY(0);opacity:1;pointer-events:auto}
+.sp-av{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--f-head);font-size:13px;letter-spacing:.04em;color:#fff}
+.sp-nm{font-size:12.5px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sp-ac{font-size:11.5px;color:var(--muted);line-height:1.4;margin-top:2px}
+.sp-ac strong{color:var(--green)}
+.sp-tm{font-size:10px;color:#bbb;margin-top:2px}
+.sp-close{position:absolute;top:8px;right:10px;background:none;border:none;cursor:pointer;color:#ccc;font-size:14px;padding:4px;transition:color .15s}
+.sp-close:hover{color:#888}
+.sp-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0;align-self:flex-start;margin-top:5px;animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}50%{box-shadow:0 0 0 5px rgba(34,197,94,0)}}
+/* ══ KENAPA CARDS ══ */
+.kenapa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:580px){.kenapa-grid{grid-template-columns:1fr}}
+.kenapa-card{
+  background:var(--warm);border:1.5px solid var(--border);
+  border-radius:18px;padding:1.5rem 1.25rem;
+  position:relative;overflow:hidden;transition:all .25s;
+}
+.kenapa-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(14,12,8,.12);border-color:var(--gold)}
+.kenapa-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--green),var(--gold-mid));
+  transform:scaleX(0);transform-origin:left;transition:transform .3s;
+}
+.kenapa-card:hover::before{transform:scaleX(1)}
+.kenapa-num{font-family:var(--f-head);font-size:56px;line-height:1;letter-spacing:.02em;color:rgba(23,79,37,.07);margin-bottom:4px}
+.kenapa-icon{font-size:28px;margin-bottom:10px}
+.kenapa-card h3{font-family:var(--f-head);font-size:17px;letter-spacing:.04em;color:var(--ink);margin-bottom:6px}
+.kenapa-card p{font-size:13px;color:var(--muted);line-height:1.65}
+/* ══ PROSPEK ══ */
+.prospek-dark{
+  background:var(--ink);border-radius:22px;
+  padding:2.5rem 2rem;color:#fff;
+  position:relative;overflow:hidden;margin-bottom:1.5rem;
+}
+.prospek-dark::before{
+  content:'';position:absolute;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,144,10,.14),transparent 65%);
+  top:-120px;right:-100px;pointer-events:none;
+}
+.prospek-dark::after{
+  content:'';position:absolute;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(23,79,37,.22),transparent 65%);
+  bottom:-60px;left:-50px;pointer-events:none;
+}
+.prospek-head{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:1.5rem}
+.prospek-nums{display:grid;grid-template-columns:1fr 1fr;gap:2rem;position:relative;z-index:1}
+@media(max-width:460px){.prospek-nums{grid-template-columns:1fr;gap:1.25rem}}
+.pnum-big{font-family:var(--f-head);font-size:clamp(34px,6vw,52px);letter-spacing:.03em;color:var(--gold-mid);line-height:1;margin-bottom:5px}
+.pnum-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55}
+.prospek-callout{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;padding:1rem 1.25rem;font-size:14px;
+  color:rgba(255,255,255,.72);margin-top:1.75rem;line-height:1.65;position:relative;z-index:1;
+}
+.prospek-callout strong{color:#fff}
+.prospek-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:1.5rem}
+@media(max-width:560px){.prospek-stats-row{grid-template-columns:1fr}}
+.pstat{
+  background:var(--warm);border:1.5px solid var(--border);border-radius:16px;
+  padding:1.1rem 1rem;text-align:center;border-top:3px solid var(--green);
+  transition:transform .2s,box-shadow .2s;
+}
+.pstat:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(14,12,8,.1)}
+.pstat-num{font-family:var(--f-head);font-size:26px;letter-spacing:.03em;color:var(--green);line-height:1;margin-bottom:4px}
+.pstat-label{font-size:12px;color:var(--muted);line-height:1.4}
+/* ══ PERSIAPAN ══ */
+.prep-list{display:flex;flex-direction:column;gap:14px}
+.prep-item{
+  display:grid;grid-template-columns:64px 1fr;gap:16px;
+  background:var(--warm);border:1.5px solid var(--border);
+  border-radius:16px;padding:1.25rem;transition:all .22s;
+}
+.prep-item:hover{transform:translateX(6px);box-shadow:0 8px 24px rgba(14,12,8,.09);border-color:var(--green)}
+.prep-icon-box{width:52px;height:52px;border-radius:13px;background:var(--green-lt);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.prep-item h3{font-family:var(--f-head);font-size:16px;letter-spacing:.04em;color:var(--ink);margin-bottom:4px}
+.prep-item p{font-size:13px;color:var(--muted);line-height:1.65}
+/* ══ TESTIMONI ══ */
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:540px){.testi-grid{grid-template-columns:1fr}}
+.testi-card{
+  background:var(--warm);border:1.5px solid var(--border);
+  border-radius:18px;padding:1.4rem 1.25rem;transition:transform .22s,box-shadow .22s;
+}
+.testi-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(14,12,8,.1)}
+.testi-quote{font-family:var(--f-head);font-size:44px;line-height:.8;letter-spacing:.02em;color:var(--green-lt);margin-bottom:.2rem}
+.testi-text{font-family:var(--f-serif);font-size:15px;font-style:italic;color:var(--ink);line-height:1.7;margin-bottom:1rem}
+.testi-stars{color:var(--gold);font-size:12px;letter-spacing:2px;margin-bottom:.75rem}
+.testi-foot{display:flex;align-items:center;gap:10px;border-top:1px solid var(--border);padding-top:.75rem}
+.tav{width:36px;height:36px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--f-head);font-size:13px;letter-spacing:.04em;color:#fff}
+.tav-g{background:linear-gradient(135deg,var(--green),var(--green-mid))}
+.tav-a{background:linear-gradient(135deg,#b06010,var(--gold))}
+.tav-t{background:linear-gradient(135deg,#1a6b6b,#2aacac)}
+.tav-r{background:linear-gradient(135deg,#8b1a1a,#c03030)}
+.tav-p{background:linear-gradient(135deg,#4a1a8b,#7a3aac)}
+.tav-b{background:linear-gradient(135deg,#1a3a8b,#3a6acd)}
+.testi-name{font-size:13px;font-weight:600;color:var(--ink)}
+.testi-role{font-size:11px;color:var(--muted)}
+.testi-badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 10px;border-radius:100px;margin-top:3px}
+.tb-online{background:var(--gold-lt);color:var(--gold)}
+.tb-gratis{background:var(--green-lt);color:var(--green)}
+.tb-offline{background:var(--red-lt);color:var(--red)}
+/* ══ FAQ ACCORDION ══ */
+.faq-list{display:flex;flex-direction:column;gap:8px}
+.faq-item{
+  background:var(--warm);border:1.5px solid var(--border);
+  border-radius:14px;overflow:hidden;transition:border-color .2s;
+}
+.faq-item:hover{border-color:var(--gold)}
+.faq-q{
+  width:100%;background:none;border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:1rem 1.25rem;
+  font-family:var(--f-body);font-size:14px;font-weight:600;
+  color:var(--ink);text-align:left;transition:color .2s;
+}
+.faq-q:hover{color:var(--green)}
+.faq-q.open{color:var(--green)}
+.faq-icon{font-size:18px;flex-shrink:0;transition:transform .3s;color:var(--muted)}
+.faq-q.open .faq-icon{transform:rotate(180deg);color:var(--green)}
+.faq-a{display:none;padding:.25rem 1.25rem 1rem}
+.faq-a.open{display:block}
+.faq-a p{font-size:13.5px;color:var(--muted);line-height:1.7}
+/* ══ REVEAL ══ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.22s}.d3{transition-delay:.32s}
+@media(max-width:600px){.nav{padding:1.25rem}.hero-body{padding:2rem 1.25rem}}
 </style>
 </head>
 <body>
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-bg-photo"></div>
+  <nav class="nav">
+    <div class="nav-brand">PAK GUNDUL <span>FARM</span></div>
+    <a href="https://ayoternak.org" class="nav-link">ayoternak.org ↗</a>
+  </nav>
+  <div class="hero-body">
+    <div class="hero-kicker">Program Pelatihan Ternak Ayam Petelur</div>
+    <h1>
+      BELAJAR<br>
+      <span class="outline">TERNAK</span><br>
+      BERSAMA <span class="gold">KAMI</span>
+    </h1>
+    <p class="hero-sub">
+      Belajar langsung dari praktisi aktif yang sudah 9 tahun beternak di Tulungagung — populasi 1.000 ekor, masih aktif berproduksi hingga hari ini.
+    </p>
+    <div class="hero-pills">
+      <span class="hero-pill green">✅ Gratis via WhatsApp</span>
+      <span class="hero-pill gold">⭐ Online via Google Meet</span>
+      <span class="hero-pill red">🏡 Langsung di Kandang</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#pelatihan-online" class="btn btn-gold">Lihat Pelatihan Online →</a>
+      <a href="https://ayoternak.org/daftar-gratis/" class="btn btn-outline">Pelatihan Gratis →</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <span class="hero-foot-txt">Pak Gundul Farm · Tulungagung, Jawa Timur · Beternak sejak 2016</span>
+    <a href="https://ayoternak.org/telur" class="hero-foot-link">Beli telur segar ↗</a>
+  </div>
+</section>
 
-<header>
-  <h1>⚖️ UU No. 20 Tahun 2001</h1>
-  <p>Perubahan atas UU No. 31 Tahun 1999 tentang Pemberantasan Tindak Pidana Korupsi</p>
-  <span class="badge">Disahkan 21 November 2001 · LN 2001/134 · TLN 4150</span>
-</header>
+<!-- ══════════ PROGRAM SECTION ══════════ -->
+<div class="lp">
+<section id="pelatihan" class="sec">
+  <div class="label label-gold">Program Kami</div>
+  <h2 class="sec-h">TIGA JALUR,<br>SATU TUJUAN</h2>
+  <p class="sec-sub">Apapun latar belakangmu — karyawan, ibu rumah tangga, wirausaha — ada program yang tepat untuk memulai.</p>
 
-<div class="container">
-
-  <!-- SEARCH -->
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="🔍 Cari pasal, kata kunci (mis: gratifikasi, penyuapan, perampasan)...">
+  <!-- ── CARD 1: GRATIS ── -->
+  <div class="card-free">
+    <div class="card-free-side">
+      <div class="card-free-num">01</div>
+      <div class="card-free-icon">💬</div>
+      <div class="card-free-tag">Gratis</div>
+    </div>
+    <div class="card-free-body">
+      <h2>PELATIHAN GRATIS<br>VIA WHATSAPP</h2>
+      <p>Belum yakin untuk mulai? Tanyakan dulu apapun yang ingin kamu ketahui tentang ternak ayam petelur. Gratis, tanpa syarat, tanpa batasan pertanyaan. Ini pintu pertama yang kami buka lebar untuk kamu.</p>
+      <ul class="card-free-features">
+        <li>Tanya kapanpun, kami jawab secepatnya</li>
+        <li>Bebas tanya soal pakan, cara pemeliharaan, dll</li>
+        <li>Cocok untuk yang baru ingin mulai belajar</li>
+        <li>Tidak ada batasan pertanyaan</li>
+        <li>100% gratis, tanpa syarat apapun</li>
+        <li>📗 <strong>Bonus Ebook Gratis</strong> cara ternak ayam petelur untuk pemula</li>
+      </ul>
+      <a href="https://ayoternak.org/daftar-gratis/" class="btn btn-green">Daftar Sekarang →</a>
+    </div>
   </div>
 
-  <!-- TABS -->
-  <div class="tabs" id="tabs">
-    <button class="tab-btn active" data-tab="ringkasan">📋 Ringkasan</button>
-    <button class="tab-btn" data-tab="pasal">📖 Pasal-Pasal</button>
-    <button class="tab-btn" data-tab="tabel">📊 Tabel Sanksi</button>
-    <button class="tab-btn" data-tab="alur">🔄 Alur Pembuktian</button>
-    <button class="tab-btn" data-tab="peralihan">⏳ Peralihan</button>
+  <!-- ── CARD 2: ONLINE (UTAMA) ── -->
+  <div class="card-online" id="pelatihan-online">
+    <div class="card-online-glow"></div>
+    <div class="card-online-photos card-online-photos-overlay">
+      <img src="https://i.ibb.co.com/JRVPTgQ1/kandangbatrekpanjang.jpg?auto=compress&cs=tinysrgb&w=400" alt="Kandang ayam petelur">
+      <img src="https://i.ibb.co.com/fdj6y9p4/nanangpakanbetrek.jpg?auto=compress&cs=tinysrgb&w=400" alt="Telur segar">
+      <img src="https://i.ibb.co.com/ccXTMZFM/nanangumbaran.jpg?auto=compress&cs=tinysrgb&w=400" alt="Peternak ayam">
+    </div>
+    <div class="card-online-top">
+      <h2>PELATIHAN ONLINE<br>VIA GOOGLE MEET</h2>
+      <span class="card-online-badge">⭐ Terpopuler</span>
+    </div>
+    <div class="card-online-body">
+      <p>Sesi privat 1-on-1 via Google Meet — materi disusun khusus agar mudah dipahami, dan langsung bisa diterapkan. Dalam 60 menit, kamu akan tahu persis apa yang harus dilakukan untuk mulai beternak dari nol. Bisa dari mana saja, jadwal menyesuaikan kamu.</p>
+      <div class="price-row">
+        <span class="price-original">Rp 500.000</span>
+        <span class="price-badge">HEMAT 80%</span>
+      </div>
+      <div class="price-current">Rp 99.900</div>
+
+      <!-- countdown ke Minggu terdekat -->
+      <div class="cd-wrap">
+        <div class="cd-label">Harga spesial berakhir pada hari Minggu ini:</div>
+        <div class="cd-boxes">
+          <div class="cd-box"><span class="cd-num" id="cd-d">00</span><span class="cd-unit">Hari</span></div>
+          <span class="cd-sep">:</span>
+          <div class="cd-box"><span class="cd-num" id="cd-h">00</span><span class="cd-unit">Jam</span></div>
+          <span class="cd-sep">:</span>
+          <div class="cd-box"><span class="cd-num" id="cd-m">00</span><span class="cd-unit">Menit</span></div>
+        </div>
+      </div>
+
+      <div class="bonus-box">
+        <span>🎁</span>
+        <p><strong>BONUS eksklusif:</strong> Cara mendapatkan modal usaha peternakan secara GRATIS — hanya dibagikan di dalam sesi pelatihan. Tidak ada di tempat lain.</p>
+      </div>
+      <div class="bonus-box">
+        <span>📗</span>
+        <p><strong>BONUS Ebook Gratis:</strong> Cara Ternak Ayam Petelur untuk Pemula — panduan lengkap yang bisa langsung kamu pelajari sebelum sesi dimulai.</p>
+      </div>
+
+      <!-- silabus accordion -->
+      <div class="silabus-wrap">
+        <button class="silabus-toggle" onclick="toggleSilabus(this)">
+          📋 Lihat Silabus Materi
+          <span class="silabus-toggle-icon">▼</span>
+        </button>
+        <div class="silabus-body">
+          <div class="silabus-item"><span class="silabus-num">M1</span><p class="silabus-text"><strong>Prospek & Peluang Usaha</strong> — Potensi pasar, simulasi kebutuhan di lingkunganmu, simulasi penghasilan nyata, dan risiko yang perlu disiapkan.</p></div>
+          <div class="silabus-item"><span class="silabus-num">M2</span><p class="silabus-text"><strong>Cara Memulai</strong> — Cek ketersediaan lahan, modal awal, jenis kandang, populasi ideal untuk pemula, dan cara memilih bibit berkualitas.</p></div>
+          <div class="silabus-item"><span class="silabus-num">M3</span><p class="silabus-text"><strong>Memelihara DOC</strong> — Kandang DOC, kebutuhan pakan, pemberian vitamin, dan perawatan di fase paling kritis.</p></div>
+          <div class="silabus-item"><span class="silabus-num">M4</span><p class="silabus-text"><strong>Fase Grower & Pullet</strong> — Formula pakan racikan, kebutuhan protein per fase, dan manajemen pertumbuhan menuju produksi.</p></div>
+          <div class="silabus-item"><span class="silabus-num">M5</span><p class="silabus-text"><strong>Ayam Produksi</strong> — Pakan ayam layer, kebutuhan harian per ekor, dan cara menghitung HPP (Harga Pokok Produksi).</p></div>
+          <div class="silabus-item"><span class="silabus-num">M6</span><p class="silabus-text"><strong>Perawatan & Kesehatan</strong> — Jadwal pemberian pakan, penyakit umum beserta solusinya, vaksinasi, suplemen, dan tanda-tanda ayam sakit.</p></div>
+        </div>
+      </div>
+
+      <ul class="card-online-features">
+        <li>Durasi 60 menit privat 1-on-1</li>
+        <li>Jadwal fleksibel, sesuai kesepakatan</li>
+        <li>Materi lengkap dari praktisi aktif</li>
+        <li>Langsung bisa diterapkan</li>
+        <li>Sesi tanya jawab bebas, tidak dibatasi</li>
+        <li>Bonus cara dapat modal gratis</li>
+        <li>Bisa dari seluruh Indonesia</li>
+        <li>Tidak perlu pengalaman sebelumnya</li>
+      </ul>
+      <a href="https://pay.doku.com/p-link/p/pelatihanonline" class="btn btn-gold" style="width:100%;justify-content:center;font-family:var(--f-head);font-size:16px;letter-spacing:.05em;padding:16px">DAFTAR PELATIHAN SEKARANG →</a>
+      <p style="font-size:12px;color:rgba(255,255,255,.35);text-align:center;margin-top:.75rem">Pembayaran aman · Jadwal dikonfirmasi setelah pembayaran</p>
+    </div>
   </div>
 
-  <!-- ================= RINGKASAN ================= -->
-  <section class="panel active" id="ringkasan">
-    <div class="stats">
-      <div class="stat"><div class="num">8</div><div class="lbl">Angka Perubahan (Pasal I)</div></div>
-      <div class="stat"><div class="num">3</div><div class="lbl">Pasal Baru (12A, 12B, 12C)</div></div>
-      <div class="stat"><div class="num">3</div><div class="lbl">Pasal Perampasan (38A–C)</div></div>
-      <div class="stat"><div class="num">2</div><div class="lbl">Pasal Peralihan (43A, 43B)</div></div>
-    </div>
+  <!-- ── CARD 3: OFFLINE ── -->
+  <div class="card-offline">
+    <div class="card-offline-body">
+      <div class="label label-red">Offline · Setiap Minggu</div>
+      <h2>MINI PELATIHAN<br>LANGSUNG DI KANDANG</h2>
+      <p>Mau belajar sambil melihat dan merasakan langsung suasana kandang nyata? Mini pelatihan ini khusus untuk kamu yang ingin pengalaman lebih dari sekadar teori. Datang langsung ke Pak Gundul Farm di Tulungagung — lihat, tanya, dan praktik secara langsung.</p>
+      <div class="offline-price-row">
+        <span class="offline-price-ori">Rp 800.000</span>
+        <span class="offline-price-badge">HEMAT 38%</span>
+      </div>
+      <div class="offline-price-current">Rp 499.000</div>
 
-    <div class="card">
-      <h3>🎯 Latar Belakang & Tujuan</h3>
-      <p>Korupsi dianggap sebagai <span class="danger">kejahatan luar biasa</span> (extraordinary crime) karena:</p>
-      <ul>
-        <li>Terjadi secara <b>meluas dan sistematis</b></li>
-        <li>Merugikan <b>keuangan negara</b></li>
-        <li>Melanggar <b>hak sosial & ekonomi</b> masyarakat luas</li>
-      </ul>
-      <p>Sehingga pemberantasannya harus dilakukan dengan <span class="highlight">cara yang luar biasa</span> — antara lain melalui <b>pembuktian terbalik</b>, perluasan alat bukti, dan perampasan aset.</p>
-    </div>
-
-    <div class="card">
-      <h3>✨ 6 Perubahan Kunci</h3>
-      <div class="grid">
-        <div>
-          <span class="pill blue">1. Rumusan Langsung</span>
-          <p style="font-size:.86rem;color:var(--muted)">Pasal 5–12 tidak lagi mengacu KUHP, tapi langsung menyebut unsur-unsurnya → menghindari multi-tafsir.</p>
-        </div>
-        <div>
-          <span class="pill gold">2. Gratifikasi</span>
-          <p style="font-size:.86rem;color:var(--muted)">Pasal 12B: gratifikasi dianggap suap jika berhubungan jabatan & berlawanan kewajiban.</p>
-        </div>
-        <div>
-          <span class="pill purple">3. Pembuktian Terbalik</span>
-          <p style="font-size:.86rem;color:var(--muted)">Terdakwa wajib buktikan harta yang diduga dari korupsi (Pasal 37A, 38B).</p>
-        </div>
-        <div>
-          <span class="pill green">4. Alat Bukti Elektronik</span>
-          <p style="font-size:.86rem;color:var(--muted)">Pasal 26A: data elektronik & dokumen digital sah sebagai petunjuk.</p>
-        </div>
-        <div>
-          <span class="pill blue">5. Korupsi Nilai Kecil</span>
-          <p style="font-size:.86rem;color:var(--muted)">Pasal 12A: < Rp5 juta → pidana khusus maks. 3 tahun, denda maks. Rp50 juta.</p>
-        </div>
-        <div>
-          <span class="pill red">6. Perampasan & Gugatan</span>
-          <p style="font-size:.86rem;color:var(--muted)">Pasal 38B–C: negara rampas harta & gugat perdata harta tersembunyi.</p>
+      <!-- countdown ke Minggu -->
+      <div class="cd-wrap-light">
+        <div class="cd-label-light">Jadwal mini pelatihan berikutnya:</div>
+        <div class="cd-boxes-light">
+          <div class="cd-box-light"><span class="cd-num-light" id="cd-d2">00</span><span class="cd-unit-light">Hari</span></div>
+          <span class="cd-sep-light">:</span>
+          <div class="cd-box-light"><span class="cd-num-light" id="cd-h2">00</span><span class="cd-unit-light">Jam</span></div>
+          <span class="cd-sep-light">:</span>
+          <div class="cd-box-light"><span class="cd-num-light" id="cd-m2">00</span><span class="cd-unit-light">Menit</span></div>
         </div>
       </div>
-    </div>
 
-    <div class="card">
-      <h3>📌 Definisi Penting</h3>
-      <p><b class="highlight">Gratifikasi:</b> pemberian dalam arti luas — uang, barang, rabat/diskon, komisi, pinjaman tanpa bunga, tiket perjalanan, fasilitas penginapan, perjalanan wisata, pengobatan cuma-cuma, dan fasilitas lain — baik di dalam/luar negeri, dengan/tanpa sarana elektronik.</p>
-      <p><b class="highlight">Penyelenggara Negara:</b> sebagaimana dimaksud Pasal 2 UU No. 28/1999 tentang Penyelenggara Negara yang Bersih dan Bebas dari KKN.</p>
-      <p><b class="highlight">Advokat:</b> orang yang berprofesi memberi jasa hukum baik di dalam maupun di luar pengadilan sesuai peraturan perundang-undangan.</p>
-    </div>
-  </section>
+      <div class="bonus-box-light">
+        <span>🥚</span>
+        <p><strong>BONUS khusus peserta Mini Pelatihan:</strong> Telur segar langsung dari kandang seberat <strong>4 kg</strong> — dibawa pulang hari itu juga.</p>
+      </div>
+      <div class="bonus-box-light">
+        <span>📗</span>
+        <p><strong>BONUS Ebook Gratis:</strong> Cara Ternak Ayam Petelur untuk Pemula — panduan lengkap yang bisa langsung kamu pelajari sebelum hari pelatihan tiba.</p>
+      </div>
 
-  <!-- ================= PASAL ================= -->
-  <section class="panel" id="pasal">
-    <div class="card searchable" data-keywords="pasal 5 suap pegawai negeri penyelenggara negara memberi menjanjikan">
-      <h3><span class="pasal">Pasal 5</span> Penyuapan Pegawai Negeri</h3>
-      <p>Setiap orang yang:</p>
-      <ul>
-        <li><b>a.</b> memberi/menjanjikan sesuatu kepada pegawai negeri/penyelenggara negara agar berbuat/tidak berbuat sesuatu yang bertentangan dengan kewajiban;</li>
-        <li><b>b.</b> memberi sesuatu karena/berhubungan dengan perbuatan yang bertentangan dengan kewajiban.</li>
+      <div class="sched-box">
+        <h4>JADWAL PELAKSANAAN</h4>
+        <div class="sched-row"><span>Hari</span><span>Setiap Minggu</span></div>
+        <div class="sched-row"><span>Lokasi</span><span>Pak Gundul Farm, Tulungagung</span></div>
+        <div class="sched-row"><span>Alamat</span><span>Dusun Grogol RT 002/002, Desa Bungur, Kec. Karangrejo</span></div>
+      </div>
+
+      <!-- Google Maps embed -->
+      <div class="maps-wrap">
+        <iframe
+          src="https://maps.google.com/maps?q=-8.0171,111.8725&z=15&output=embed"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <ul class="card-offline-features">
+        <li>Semua materi pelatihan online + lebih banyak praktik</li>
+        <li>Lihat langsung kondisi kandang yang sesungguhnya</li>
+        <li>Praktik memberi pakan, merawat, dan memanen telur</li>
+        <li>Tanya jawab secara langsung</li>
+        <li>Bonus telur segar 4 kg dibawa pulang</li>
       </ul>
-      <p><b>Penerima</b> (ayat 2) dipidana sama.</p>
-      <p><span class="pill blue">Penjara 1–5 tahun</span> <span class="pill gold">Denda Rp50 jt – Rp250 jt</span></p>
+      <a href="https://pay.doku.com/p-link/p/minipelatihan" class="btn btn-green" style="display:inline-flex;align-items:center;gap:8px">Daftar Mini Pelatihan →</a>
     </div>
+  </div>
+</section>
 
-    <div class="card searchable" data-keywords="pasal 6 suap hakim advokat mempengaruhi putusan nasihat">
-      <h3><span class="pasal">Pasal 6</span> Penyuapan Hakim & Advokat</h3>
-      <p>Memberi/menjanjikan sesuatu kepada:</p>
-      <ul>
-        <li><b>a.</b> <b>Hakim</b> — untuk mempengaruhi putusan perkara;</li>
-        <li><b>b.</b> <b>Advokat</b> — untuk mempengaruhi nasihat/pendapat dalam sidang.</li>
-      </ul>
-      <p><b>Penerima</b> (ayat 2) dipidana sama.</p>
-      <p><span class="pill red">Penjara 3–15 tahun</span> <span class="pill gold">Denda Rp150 jt – Rp750 jt</span></p>
+<!-- ══════════ KENAPA TERNAK AYAM PETELUR ══════════ -->
+<section class="sec">
+  <div class="label label-green">Mengapa ayam petelur?</div>
+  <h2 class="sec-h">DARI SEMUA USAHA SAMPINGAN,<br>ini yang paling masuk akal</h2>
+  <p class="sec-sub">Bukan soal modal besar atau lahan luas. Ini soal usaha yang bisa langsung menghasilkan — dengan risiko yang bisa dikendalikan.</p>
+  <div class="kenapa-grid">
+    <div class="kenapa-card"><div class="kenapa-num">01</div><div class="kenapa-icon">🪙</div><h3>CUAN TIAP HARI</h3><p>Ayam bertelur setiap hari dan telur bisa langsung dijual. Tidak perlu menunggu panen bulanan — pemasukan datang setiap hari.</p></div>
+    <div class="kenapa-card"><div class="kenapa-num">02</div><div class="kenapa-icon">🌱</div><h3>MODAL FLEKSIBEL</h3><p>Bisa mulai dari 5 ekor, bertambah pelan-pelan sesuai kemampuan. Tidak harus langsung besar untuk mulai menghasilkan.</p></div>
+    <div class="kenapa-card"><div class="kenapa-num">03</div><div class="kenapa-icon">⏰</div><h3>TIDAK MENYITA WAKTU</h3><p>Cukup 2x pakan sehari — pagi dan sore. Cocok untuk karyawan, ibu rumah tangga, atau siapapun yang punya kesibukan lain.</p></div>
+    <div class="kenapa-card"><div class="kenapa-num">04</div><div class="kenapa-icon">📈</div><h3>PERMINTAAN STABIL</h3><p>Telur adalah kebutuhan pokok yang tidak pernah sepi. Di kondisi ekonomi apapun, orang tetap butuh telur sebagai bahan pangan.</p></div>
+    <div class="kenapa-card"><div class="kenapa-num">05</div><div class="kenapa-icon">🏡</div><h3>LAHAN MINIMAL</h3><p>Cukup lahan 4×8 meter untuk memelihara 100 ekor ayam. Pekarangan rumah yang selama ini kosong bisa jadi sumber penghasilan.</p></div>
+    <div class="kenapa-card"><div class="kenapa-num">06</div><div class="kenapa-icon">🔄</div><h3>BISA BERKEMBANG BESAR</h3><p>Mulai kecil, pelajari ilmunya, lalu kembangkan secara bertahap. Banyak peternak sukses yang memulai dari kandang sederhana.</p></div>
+  </div>
+</section>
+
+<!-- ══════════ PROSPEK PASAR ══════════ -->
+<section class="sec">
+  <div class="label label-gold">Prospek pasar</div>
+  <h2 class="sec-h">PELUANGNYA NYATA —<br>ada di sekitar rumahmu</h2>
+  <p class="sec-sub">Data Kementerian Pertanian & Bappenas 2024–2025 membuktikan kebutuhan telur Indonesia terus tumbuh setiap tahun.</p>
+  <div class="prospek-dark">
+    <div class="prospek-head">Konsumsi telur Indonesia · Kementan & Bappenas 2024–2025</div>
+    <div class="prospek-nums">
+      <div><div class="pnum-big">22,16 kg</div><div class="pnum-desc">konsumsi telur per kapita per tahun di Indonesia</div></div>
+      <div><div class="pnum-big">3.500 butir</div><div class="pnum-desc">kebutuhan telur per minggu di lingkungan 500 orang saja</div></div>
     </div>
+    <div class="prospek-callout">💡 <strong>Pasarnya ada di depan mata.</strong> Tetangga, warung, kantin, pasar terdekat — mereka butuh telur setiap minggu tanpa henti. Kamu tinggal yang menyediakannya. Dan dengan ilmu yang tepat dari pelatihan kami, kamu bisa mulai memasok kebutuhan itu sekarang.</div>
+  </div>
+</section>
 
-    <div class="card searchable" data-keywords="pasal 7 pemborong ahli bangunan curang TNI Polri perang pengawas">
-      <h3><span class="pasal">Pasal 7</span> Perbuatan Curang Konstruksi & Pengadaan</h3>
-      <ul>
-        <li><b>a.</b> Pemborong/ahli bangunan/penjual bahan bangunan berbuat curang yang membahayakan keamanan/k3selamatan negara dalam perang;</li>
-        <li><b>b.</b> Pengawas sengaja membiarkan perbuatan curang;</li>
-        <li><b>c.</b> Penyerah barang keperluan TNI/Polri berbuat curang;</li>
-        <li><b>d.</b> Pengawas penyerahan barang TNI/Polri membiarkan kecurangan.</li>
-      </ul>
-      <p><b>Penerima</b> yang membiarkan (ayat 2) dipidana sama.</p>
-      <p><span class="pill blue">Penjara 2–7 tahun</span> <span class="pill gold">Denda Rp100 jt – Rp350 jt</span></p>
+<!-- ══════════ YANG PERLU DISIAPKAN ══════════ -->
+<section class="sec">
+  <div class="label label-green">Yang perlu disiapkan</div>
+  <h2 class="sec-h">SYARATNYA TIDAK SEBERAT<br>yang kamu bayangkan</h2>
+  <p class="sec-sub">Tiga modal utama — dan semuanya bisa dimulai dari yang paling kecil dulu.</p>
+  <div class="prep-list">
+    <div class="prep-item">
+      <div class="prep-icon-box">🏡</div>
+      <div><h3>LAHAN</h3><p>Lahan kosong di sekitar rumah bisa dimanfaatkan dengan lebih produktif. Lahan 4×8 meter sudah sangat ideal untuk memelihara hingga 100 ekor ayam. Tidak perlu menyewa lahan baru — manfaatkan yang sudah ada.</p></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 8 penggelapan uang surat berharga jabatan pegawai negeri">
-      <h3><span class="pasal">Pasal 8</span> Penggelapan Uang/Surat Berharga Jabatan</h3>
-      <p>Pegawai negeri/orang yang menjalankan jabatan umum yang dengan sengaja:</p>
-      <ul>
-        <li>Menggelapkan uang/surat berharga yang disimpan karena jabatannya;</li>
-        <li>Membiarkan diambil/digelapkan orang lain;</li>
-        <li>Membantu perbuatan tersebut.</li>
-      </ul>
-      <p><span class="pill red">Penjara 3–15 tahun</span> <span class="pill gold">Denda Rp150 jt – Rp750 jt</span></p>
+    <div class="prep-item">
+      <div class="prep-icon-box">💰</div>
+      <div><h3>MODAL</h3><p>Modal diperlukan untuk kandang, bibit, dan pakan. Bisa dimulai dari skala kecil dan dikembangkan bertahap — tidak harus sekaligus besar di awal. Di pelatihan, kami juga bagikan cara mendapatkan modal tambahan secara gratis.</p></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 9 pemalsuan buku daftar administrasi">
-      <h3><span class="pasal">Pasal 9</span> Pemalsuan Buku/Daftar Administrasi</h3>
-      <p>Pegawai negeri/orang yang menjalankan jabatan umum dengan sengaja <b>memalsu buku-buku atau daftar-daftar</b> khusus untuk pemeriksaan administrasi.</p>
-      <p><span class="pill blue">Penjara 1–5 tahun</span> <span class="pill gold">Denda Rp50 jt – Rp250 jt</span></p>
+    <div class="prep-item">
+      <div class="prep-icon-box">📖</div>
+      <div><h3>PENGETAHUAN</h3><p>Inilah yang paling penting dan paling sering diabaikan. Pemahaman yang benar tentang teknik pemeliharaan berdampak langsung pada keberhasilan usaha. Kabar baiknya — <strong>ini bisa kamu pelajari bersama kami, mulai dari yang gratis.</strong></p></div>
     </div>
+  </div>
+</section>
 
-    <div class="card searchable" data-keywords="pasal 10 menghancurkan merusak barang akta surat daftar">
-      <h3><span class="pasal">Pasal 10</span> Perusakan Barang/Akta/Surat Bukti</h3>
-      <p>Dengan sengaja:</p>
-      <ul>
-        <li><b>a.</b> Menggelapkan/menghancurkan/merusak/membuat tidak dapat dipakai barang, akta, surat, daftar yang dikuasai karena jabatan;</li>
-        <li><b>b.</b> Membiarkan orang lain melakukannya;</li>
-        <li><b>c.</b> Membantu orang lain melakukannya.</li>
-      </ul>
-      <p><span class="pill blue">Penjara 2–7 tahun</span> <span class="pill gold">Denda Rp100 jt – Rp350 jt</span></p>
+<!-- ══════════ TESTIMONI ══════════ -->
+<section class="sec">
+  <div class="label label-gold">Kata peserta</div>
+  <h2 class="sec-h">YANG SUDAH BERGABUNG<br>bicara sendiri</h2>
+  <p class="sec-sub">Dari berbagai latar belakang dan penjuru Indonesia — karyawan, ibu rumah tangga, wirausaha, pensiunan. Mereka sudah mulai dan merasakan hasilnya.</p>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Awalnya saya skeptis, tapi setelah ikut pelatihan online Pak Nanang, saya baru sadar betapa mudah dan sistematisnya ilmu yang beliau bagikan. Sekarang sudah punya 50 ekor dan telur terjual habis tiap minggu ke warung-warung sekitar.</p>
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-foot"><div class="tav tav-g">RH</div><div><div class="testi-name">Rudi Hartono</div><div class="testi-role">Karyawan Swasta, Malang</div><span class="testi-badge tb-online">Pelatihan Online</span></div></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 11 hadiah janji kekuasaan jabatan">
-      <h3><span class="pasal">Pasal 11</span> Menerima Hadiah karena Kekuasaan Jabatan</h3>
-      <p>Pegawai negeri/penyelenggara negara yang menerima hadiah/janji padahal <b>diketahui atau patut diduga</b> diberikan karena kekuasaan/kewenangan jabatannya.</p>
-      <p><span class="pill blue">Penjara 1–5 tahun</span> <span class="pill gold">Denda Rp50 jt – Rp250 jt</span></p>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Saya ibu rumah tangga yang mulai dari 10 ekor. Tanya-jawab gratis via WA dulu, baru daftar pelatihan online. Pak Nanang sabar banget menjawab semua pertanyaan saya yang "newbie" banget. Alhamdulillah sudah 3 bulan berjalan lancar!</p>
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-foot"><div class="tav tav-a">SR</div><div><div class="testi-name">Sari Rahayu</div><div class="testi-role">Ibu Rumah Tangga, Kediri</div><span class="testi-badge tb-gratis">Gratis WA → Online</span></div></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 12 korupsi berat seumur hidup memaksa memotong tanah negara pemborongan pengadaan">
-      <h3><span class="pasal">Pasal 12</span> Bentuk-Bentuk Korupsi Berat</h3>
-      <ul>
-        <li><b>a.</b> Menerima hadiah/janji untuk menggerakkan perbuatan melawan kewajiban;</li>
-        <li><b>b.</b> Menerima hadiah akibat perbuatan melawan kewajiban;</li>
-        <li><b>c.</b> Hakim menerima hadiah untuk mempengaruhi putusan;</li>
-        <li><b>d.</b> Advokat menerima hadiah untuk mempengaruhi nasihat;</li>
-        <li><b>e.</b> Memaksa memberi/membayar/menerima potongan untuk keuntungan sendiri;</li>
-        <li><b>f.</b> Meminta/memotong pembayaran seolah-olah utang;</li>
-        <li><b>g.</b> Meminta pekerjaan/penyerahan barang seolah-olah utang;</li>
-        <li><b>h.</b> Menggunakan tanah negara yang ada hak pakai secara melawan hukum;</li>
-        <li><b>i.</b> Turut serta dalam pemborongan/pengadaan/persewaan saat menjalankan tugas.</li>
-      </ul>
-      <p><span class="pill red">Penjara seumur hidup atau 4–20 tahun</span> <span class="pill gold">Denda Rp200 jt – Rp1 M</span></p>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Materi pelatihannya lengkap dan to the point. Dari kandang, pakan, cara pemeliharaan, sampai cara jual telur — semua dibahas tuntas dalam 60 menit. Bonus cara dapat modal gratis itu yang paling bikin kaget. Worth it banget!</p>
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-foot"><div class="tav tav-t">AP</div><div><div class="testi-name">Agus Priyanto</div><div class="testi-role">Wirausaha, Tulungagung</div><span class="testi-badge tb-online">Pelatihan Online</span></div></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 12A korupsi nilai kecil lima juta">
-      <h3><span class="pasal">Pasal 12A</span> Korupsi Nilai Kecil (&lt; Rp5 juta)</h3>
-      <ul>
-        <li><b>(1)</b> Ketentuan pidana Pasal 5–12 <b>tidak berlaku</b> untuk korupsi <b>&lt; Rp5.000.000</b>.</li>
-        <li><b>(2)</b> Pelakunya dipidana <b>maksimal 3 tahun</b> dan denda <b>maksimal Rp50 juta</b>.</li>
-      </ul>
-      <div class="note green">Tujuan: menghilangkan rasa ketidakadilan bagi korupsi nilai relatif kecil.</div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Saya pensiunan yang butuh kegiatan produktif. Ikut mini pelatihan langsung di kandang Pak Gundul Farm benar-benar membuka mata. Melihat langsung prosesnya jauh lebih mudah dipahami. Sekarang punya 300 ekor dan sudah balik modal.</p>
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-foot"><div class="tav tav-r">BW</div><div><div class="testi-name">Bambang Widodo</div><div class="testi-role">Pensiunan PNS, Blitar</div><span class="testi-badge tb-offline">Mini Pelatihan</span></div></div>
     </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Tinggal di Bandung tapi tetap bisa ikut pelatihan online. Pak Nanang sangat responsif dan materi yang diberikan sangat applicable. Saya langsung bisa memulai dengan 20 ekor di lahan kecil samping rumah. Terima kasih Pak Gundul Farm!</p>
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-foot"><div class="tav tav-p">AN</div><div><div class="testi-name">Asep Nugraha</div><div class="testi-role">Karyawan, Bandung</div><span class="testi-badge tb-online">Pelatihan Online</span></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Mulai dari tanya-jawab gratis WA dulu. Ilmunya sangat membantu meski gratis! Setelah yakin, langsung daftar pelatihan online. Investasi Rp 99.900 ini jauh lebih berharga dari yang saya bayangkan. Sudah 2 bulan beternak di Medan, hasilnya memuaskan.</p>
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-foot"><div class="tav tav-b">RF</div><div><div class="testi-name">Rizky Fadillah</div><div class="testi-role">Wiraswasta, Medan</div><span class="testi-badge tb-online">Gratis WA → Online</span></div></div>
+    </div>
+  </div>
+</section>
 
-    <div class="card searchable" data-keywords="pasal 12B gratifikasi suap sepuluh juta pembuktian terbalik">
-      <h3><span class="pasal">Pasal 12B</span> Gratifikasi</h3>
-      <p><b>(1)</b> Setiap gratifikasi kepada pegawai negeri/penyelenggara negara <b>dianggap suap</b> apabila berhubungan dengan jabatan dan berlawanan dengan kewajiban/tugas, dengan ketentuan:</p>
-      <ul>
-        <li><b>a.</b> Nilai <b>≥ Rp10 juta</b> → <span class="highlight">penerima</span> wajib membuktikan bukan suap (pembuktian terbalik);</li>
-        <li><b>b.</b> Nilai <b>&lt; Rp10 juta</b> → <span class="highlight">penuntut umum</span> wajib membuktikan itu suap.</li>
-      </ul>
-      <p><b>(2)</b> Pidana: <span class="pill red">seumur hidup atau 4–20 tahun</span> <span class="pill gold">Denda Rp200 jt – Rp1 M</span></p>
-      <div class="note">
-        <b>Definisi Gratifikasi:</b> pemberian dalam arti luas — uang, barang, rabat/diskon, komisi, pinjaman tanpa bunga, tiket perjalanan, fasilitas penginapan, perjalanan wisata, pengobatan cuma-cuma, dan fasilitas lainnya, baik di dalam/luar negeri, dengan/tanpa sarana elektronik.
+<!-- ══════════ PERBANDINGAN ══════════ -->
+<section class="sec">
+  <div class="label label-green">Perbandingan Program</div>
+  <h2 class="sec-h">PILIH YANG<br>PALING COCOK</h2>
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Fitur</th>
+        <th>Gratis WA</th>
+        <th>⭐ Online Meet</th>
+        <th>Offline Kandang</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Biaya</td><td>Gratis</td><td>Rp 99.900</td><td>Rp 499.000</td></tr>
+      <tr><td>Media</td><td>WhatsApp</td><td>Google Meet</td><td>Langsung di lokasi</td></tr>
+      <tr><td>Jadwal</td><td>Kapanpun</td><td>Fleksibel</td><td>Setiap Minggu</td></tr>
+      <tr><td>Materi terstruktur</td><td>—</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Silabus 6 modul</td><td>—</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Praktik langsung</td><td>—</td><td>—</td><td>✓</td></tr>
+      <tr><td>Bonus modal gratis</td><td>—</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Bonus telur 4 kg</td><td>—</td><td>—</td><td>✓</td></tr>
+      <tr><td>Bisa dari luar kota</td><td>✓</td><td>✓</td><td>—</td></tr>
+      <tr><td>Durasi</td><td>Bebas</td><td>60 menit</td><td>Sehari penuh</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;color:var(--muted);font-style:italic;margin-top:1rem;font-family:var(--f-serif)">Rekomendasi: Mulai dari gratis WA → setelah yakin, daftar Pelatihan Online. Bagi yang ingin pengalaman langsung, Mini Pelatihan adalah pilihan terbaik.</p>
+</section>
+
+<!-- ══════════ PROFIL NARASUMBER ══════════ -->
+<section class="sec">
+  <div class="label label-gold">Narasumber</div>
+  <h2 class="sec-h" style="margin-bottom:1.5rem">BELAJAR DARI<br>YANG SUDAH MEMBUKTIKAN</h2>
+  <div class="profile-wrap">
+    <img
+      class="profile-photo-strip"
+      src="https://i.ibb.co.com/35bCH5Zz/nanangtekur.jpg?auto=compress&cs=tinysrgb&w=800"
+      alt="Nanang Agus Subekti di kandang Pak Gundul Farm"
+      onerror="this.style.display='none'"
+    >
+    <div class="profile-content">
+      <div class="pav">NA</div>
+      <div>
+        <div class="pname">NANANG AGUS SUBEKTI</div>
+        <div class="prole">ASN & Owner Pak Gundul Farm · Tulungagung</div>
+        <p class="pbio">Sejak 2016, Pak Nanang membuktikan bahwa beternak ayam petelur bisa berjalan berdampingan dengan pekerjaan utama sebagai ASN — tanpa mengorbankan salah satunya.<br><br>Pak Gundul Farm sengaja dijaga di skala rumahan dengan populasi 1.000 ekor, terdiri dari DOC, grower, pullet, hingga ayam produksi. Bukan karena keterbatasan, tapi karena pilihan sadar: kandang berada di lingkungan pemukiman, dan menjaga kenyamanan warga sekitar adalah prioritas utama.<br><br>Filosofi inilah yang diajarkan — beternak yang bertanggung jawab, berkelanjutan, dan tidak mengganggu lingkungan.</p>
       </div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 12C laporan gratifikasi KPK tiga puluh hari kerja">
-      <h3><span class="pasal">Pasal 12C</span> Pelaporan Gratifikasi ke KPK</h3>
-      <ul>
-        <li><b>(1)</b> Pasal 12B ayat (1) <b>tidak berlaku</b> jika penerima <b>melaporkan</b> gratifikasi kepada <b>KPK</b>.</li>
-        <li><b>(2)</b> Laporan wajib disampaikan <b>paling lambat 30 hari kerja</b> sejak gratifikasi diterima.</li>
-        <li><b>(3)</b> KPK wajib menetapkan status gratifikasi (milik penerima/negara) <b>paling lambat 30 hari kerja</b> sejak laporan diterima.</li>
-        <li><b>(4)</b> Tata cara diatur dalam UU tentang KPK.</li>
-      </ul>
+    <div class="profile-stats">
+      <div class="p-stat"><div class="p-stat-num">9 Tahun</div><div class="p-stat-lbl">Pengalaman beternak aktif</div></div>
+      <div class="p-stat"><div class="p-stat-num">1.000</div><div class="p-stat-lbl">Ekor populasi saat ini</div></div>
+      <div class="p-stat"><div class="p-stat-num">4 Fase</div><div class="p-stat-lbl">DOC · Grower · Pullet · Produksi</div></div>
     </div>
+  </div>
+</section>
 
-    <div class="card searchable" data-keywords="pasal 26A alat bukti elektronik petunjuk dokumen CD-ROM email">
-      <h3><span class="pasal">Pasal 26A</span> Alat Bukti Elektronik</h3>
-      <p>Alat bukti sah berupa <b>petunjuk</b> (Pasal 188 ayat (2) KUHAP) untuk korupsi juga dapat diperoleh dari:</p>
-      <ul>
-        <li><b>a.</b> Informasi yang diucapkan/dikirim/diterima/disimpan secara elektronik dengan alat optik atau serupa (mikro film, CD-ROM, WORM, e-mail, telegram, teleks, faksimili);</li>
-        <li><b>b.</b> <b>Dokumen</b> — rekaman data/informasi yang dapat dilihat/dibaca/didengar, baik di kertas, benda fisik selain kertas, maupun terekam elektronik (tulisan, suara, gambar, peta, rancangan, foto, huruf, tanda, angka, perforasi yang bermakna).</li>
-      </ul>
+<!-- ══════════ FAQ ══════════ -->
+<section class="sec">
+  <div class="label label-green">FAQ</div>
+  <h2 class="sec-h" style="margin-bottom:1.5rem">PERTANYAAN<br>YANG SERING DITANYAKAN</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Saya dari luar kota, apa bisa ikut?<span class="faq-icon">▼</span></button>
+      <div class="faq-a"><p>Bisa. Pelatihan Online dilakukan via Google Meet, jadi bisa diikuti dari mana saja — Jawa, Sumatera, Kalimantan, Sulawesi, Papua, semuanya bisa. Kamu hanya butuh koneksi internet yang stabil.</p></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 37 hak terdakwa membuktikan tidak korupsi">
-      <h3><span class="pasal">Pasal 37</span> Hak Terdakwa</h3>
-      <ul>
-        <li><b>(1)</b> Terdakwa <b>berhak</b> membuktikan ia tidak melakukan tindak pidana korupsi.</li>
-        <li><b>(2)</b> Jika berhasil, pembuktian itu <b>digunakan pengadilan sebagai dasar menyatakan dakwaan tidak terbukti</b>.</li>
-      </ul>
-      <div class="note">Konsekuensi berimbang atas pembuktian terbalik; tetap melindungi <b>asas praduga tak bersalah</b> dan <b>non-self-incrimination</b>. Tidak menganut sistem pembuktian negatif menurut UU (negatief wettelijk).</div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Apakah sesi pelatihan online direkam?<span class="faq-icon">▼</span></button>
+      <div class="faq-a"><p>Sesi ini bersifat privat dan live, tidak direkam. Justru ini kelebihannya — kamu bisa bertanya langsung dan mendapat jawaban sesuai kondisi spesifik di daerahmu, bukan jawaban generik.</p></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 37A kewajiban terdakwa harta benda istri anak korporasi">
-      <h3><span class="pasal">Pasal 37A</span> Kewajiban Terdakwa</h3>
-      <ul>
-        <li><b>(1)</b> Terdakwa <b>wajib</b> memberi keterangan seluruh harta bendanya, harta istri/suami, anak, dan setiap orang/korporasi yang diduga berhubungan dengan perkara.</li>
-        <li><b>(2)</b> Jika tidak dapat membuktikan kekayaan tidak seimbang dengan penghasilan, keterangan itu <b>memperkuat alat bukti</b> bahwa terdakwa korupsi.</li>
-        <li><b>(3)</b> Ketentuan ini berlaku untuk perkara pokok Pasal 2, 3, 4, 13–16 UU 31/1999 dan Pasal 5–12 UU ini; <b>penuntut umum tetap wajib membuktikan dakwaan</b>.</li>
-      </ul>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Jadwalnya bagaimana?<span class="faq-icon">▼</span></button>
+      <div class="faq-a"><p>Untuk pelatihan online, jadwal disepakati bersama setelah pendaftaran dan pembayaran dikonfirmasi. Sangat fleksibel mengikuti waktu luangmu — pagi, siang, atau malam.</p></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 38A pembuktian gratifikasi sidang pengadilan">
-      <h3><span class="pasal">Pasal 38A</span> Pembuktian Gratifikasi di Sidang</h3>
-      <p>Pembuktian Pasal 12B ayat (1) dilakukan <b>pada saat pemeriksaan di sidang pengadilan</b>.</p>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Bagaimana cara mendaftar & membayar?<span class="faq-icon">▼</span></button>
+      <div class="faq-a"><p>Klik tombol "Daftar Pelatihan Sekarang", lakukan pembayaran melalui sistem yang tersedia, lalu kamu akan dihubungi untuk menentukan jadwal sesi. Untuk mini pelatihan offline, klik tombol pendaftaran yang tersedia di bagian mini pelatihan.</p></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 38B perampasan harta benda pembuktian terbalik hakim">
-      <h3><span class="pasal">Pasal 38B</span> Perampasan Harta Benda</h3>
-      <ul>
-        <li><b>(1)</b> Terdakwa <b>wajib membuktikan sebaliknya</b> terhadap harta miliknya yang belum didakwakan tapi diduga dari korupsi.</li>
-        <li><b>(2)</b> Jika gagal, harta <b>dianggap dari korupsi</b> dan hakim berwenang <b>merampas seluruh/sebagian untuk negara</b>.</li>
-        <li><b>(3)</b> Tuntutan perampasan diajukan penuntut umum saat membacakan tuntutan perkara pokok.</li>
-        <li><b>(4)</b> Pembuktian oleh terdakwa saat pembelaan; dapat diulang di memori banding & kasasi.</li>
-        <li><b>(5)</b> Hakim <b>wajib membuka persidangan khusus</b> untuk memeriksa pembuktian tersebut.</li>
-        <li><b>(6)</b> Jika terdakwa dibebaskan/lepas, tuntutan perampasan <b>harus ditolak</b>.</li>
-      </ul>
-      <div class="note">Perampasan diserahkan kepada hakim dengan pertimbangan <b>prikemanusiaan & jaminan hidup</b> terdakwa.</div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Apakah cocok untuk pemula?<span class="faq-icon">▼</span></button>
+      <div class="faq-a"><p>Justru ini sasaran utama kami. Materi disusun dari nol, tidak ada istilah teknis yang membingungkan, dan kamu bebas bertanya apapun. Banyak peserta kami yang sama sekali tidak punya pengalaman dan tidak pernah beternak sebelumnya.</p></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 38C gugatan perdata harta terpidana ahli waris">
-      <h3><span class="pasal">Pasal 38C</span> Gugatan Perdata</h3>
-      <p>Jika setelah putusan <b>inkracht</b> masih ada harta terpidana yang diduga dari korupsi dan belum dirampas, <b>negara dapat mengajukan gugatan perdata</b> terhadap terpidana dan/atau ahli warisnya.</p>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Apakah bisa diterapkan di lahan sempit?<span class="faq-icon">▼</span></button>
+      <div class="faq-a"><p>Bisa. Kami akan menyesuaikan pembahasan dengan kondisi lahan dan lokasi yang kamu miliki. Pak Gundul Farm sendiri berlokasi di area pemukiman dan tetap produktif — bukti nyata bahwa beternak skala rumahan sangat mungkin dilakukan.</p></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 43A ketentuan peralihan UU 3 1971 lex favor reo">
-      <h3><span class="pasal">Pasal 43A</span> Ketentuan Peralihan</h3>
-      <ul>
-        <li><b>(1)</b> Korupsi <b>sebelum UU 31/1999</b> → diperiksa berdasarkan <b>UU 3/1971</b>, dengan maksimum pidana yang menguntungkan terdakwa berlaku Pasal 5–10 UU ini & Pasal 13 UU 31/1999.</li>
-        <li><b>(2)</b> Ketentuan <b>minimum</b> pidana Pasal 5–10 UU ini & Pasal 13 UU 31/1999 <b>tidak berlaku</b> untuk korupsi sebelum UU 31/1999.</li>
-        <li><b>(3)</b> Korupsi <b>sebelum UU ini</b> → diperiksa berdasarkan UU 31/1999, dengan maksimum pidana untuk korupsi <b>&lt; Rp5 juta</b> berlaku Pasal 12A ayat (2) UU ini.</li>
-      </ul>
-      <div class="note green">Sesuai asas umum hukum pidana <b>Pasal 1 ayat (2) KUHP</b> — lex favor reo (hukum yang menguntungkan terdakwa).</div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Bisakah bertanya setelah pelatihan?<span class="faq-icon">▼</span></button>
+      <div class="faq-a"><p>Untuk pertanyaan lanjutan setelah sesi selesai, kamu tetap bisa menghubungi via WhatsApp. Kami tidak meninggalkan peserta begitu saja setelah pelatihan selesai.</p></div>
     </div>
-
-    <div class="card searchable" data-keywords="pasal 43B pencabutan KUHP 209 210 387 388 415 416 417 418 419 420 423 425 435">
-      <h3><span class="pasal">Pasal 43B</span> Pencabutan Pasal KUHP</h3>
-      <p>Pada saat UU ini berlaku, pasal-pasal KUHP berikut <b>dinyatakan tidak berlaku</b>:</p>
-      <p><span class="pill red">Pasal 209</span> <span class="pill red">210</span> <span class="pill red">387</span> <span class="pill red">388</span> <span class="pill red">415</span> <span class="pill red">416</span> <span class="pill red">417</span> <span class="pill red">418</span> <span class="pill red">419</span> <span class="pill red">420</span> <span class="pill red">423</span> <span class="pill red">425</span> <span class="pill red">435</span></p>
-      <p style="font-size:.85rem;color:var(--muted)">jo. UU No. 1/1946 jo. UU No. 73/1958 jo. UU No. 27/1999.</p>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Apakah ada jaminan berhasil?<span class="faq-icon">▼</span></button>
+      <div class="faq-a"><p>Pelatihan berfungsi untuk meningkatkan pengetahuan, keterampilan dan untuk meminimalkan resiko kerugian, kami sangat berharap semua peserta yang mempraktekkan ilmu dan pengalaman yang kami sampaikan sini dapat berhasil dan sukses, namun keberhasilan bukan hal yang bisa dipastikan, ada banyak faktor penentu yang mempengaruhi. Tugas kita adalah berusaha sebaik mungkin untuk mencapai keberhasilan tersebut.</p></div>
     </div>
+  </div>
+</section>
 
-    <div class="no-result" id="noResult">😕 Tidak ada pasal yang cocok dengan pencarian Anda.</div>
-  </section>
+<!-- ══════════ FINAL CTA ══════════ -->
+<div class="final">
+  <h2>SIAP MULAI<br>BETERNAK?</h2>
+  <p>Mulai dari yang gratis, atau langsung daftar pelatihan online hari ini. Satu langkah kecil hari ini, perubahan nyata di bulan depan.</p>
+  <div class="final-btns">
+    <a href="https://ayoternak.org/daftar-gratis/" class="btn btn-white">🚀 Mulai Pelatihan Gratis</a>
+    <a href="https://pay.doku.com/p-link/p/pelatihanonline" class="btn btn-gold">⭐ Daftar Pelatihan Online</a>
+  </div>
+</div>
+</div>
+<!-- end .lp -->
 
-  <!-- ================= TABEL ================= -->
-  <section class="panel" id="tabel">
-    <div class="card">
-      <h3>📊 Tabel Sanksi Pidana</h3>
-      <div style="overflow-x:auto">
-        <table>
-          <thead>
-            <tr><th>Pasal</th><th>Perbuatan</th><th>Pidana Penjara</th><th>Denda</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><b>5</b></td><td>Menyuap pegawai negeri/penyelenggara negara</td><td>1–5 tahun</td><td>Rp50 jt – Rp250 jt</td></tr>
-            <tr><td><b>6</b></td><td>Menyuap hakim/advokat</td><td>3–15 tahun</td><td>Rp150 jt – Rp750 jt</td></tr>
-            <tr><td><b>7</b></td><td>Curang dalam konstruksi/pengadaan TNI-Polri</td><td>2–7 tahun</td><td>Rp100 jt – Rp350 jt</td></tr>
-            <tr><td><b>8</b></td><td>Menggelapkan uang/surat berharga jabatan</td><td>3–15 tahun</td><td>Rp150 jt – Rp750 jt</td></tr>
-            <tr><td><b>9</b></td><td>Memalsu buku/daftar administrasi</td><td>1–5 tahun</td><td>Rp50 jt – Rp250 jt</td></tr>
-            <tr><td><b>10</b></td><td>Merusak barang/akta/surat bukti</td><td>2–7 tahun</td><td>Rp100 jt – Rp350 jt</td></tr>
-            <tr><td><b>11</b></td><td>Menerima hadiah karena kekuasaan jabatan</td><td>1–5 tahun</td><td>Rp50 jt – Rp250 jt</td></tr>
-            <tr><td><b>12</b></td><td>Korupsi berat (9 bentuk)</td><td>Seumur hidup / 4–20 tahun</td><td>Rp200 jt – Rp1 M</td></tr>
-            <tr style="background:rgba(251,191,36,.07)"><td><b>12A</b></td><td>Korupsi nilai &lt; Rp5 juta</td><td>Maks. 3 tahun</td><td>Maks. Rp50 jt</td></tr>
-            <tr style="background:rgba(248,113,113,.07)"><td><b>12B</b></td><td>Gratifikasi (dianggap suap)</td><td>Seumur hidup / 4–20 tahun</td><td>Rp200 jt – Rp1 M</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ALUR ================= -->
-  <section class="panel" id="alur">
-    <div class="card">
-      <h3>🔄 Alur Pembuktian Gratifikasi (Pasal 12B & 12C)</h3>
-      <div class="flow">
-        <div class="flow-step">
-          <div class="flow-num">1</div>
-          <div class="flow-content">
-            <h4>Gratifikasi Diterima</h4>
-            <p>Pegawai negeri/penyelenggara negara menerima gratifikasi yang berhubungan dengan jabatan & berlawanan dengan kewajiban.</p>
-          </div>
-        </div>
-        <div class="flow-step">
-          <div class="flow-num">2</div>
-          <div class="flow-content">
-            <h4>Cek Nilai Gratifikasi</h4>
-            <p><span class="pill gold">≥ Rp10 juta</span> → beban pembuktian pada <b>penerima</b>.<br>
-               <span class="pill blue">&lt; Rp10 juta</span> → beban pembuktian pada <b>penuntut umum</b>.</p>
-          </div>
-        </div>
-        <div class="flow-step">
-          <div class="flow-num">3</div>
-          <div class="flow-content">
-            <h4>Opsi Pelaporan ke KPK</h4>
-            <p>Penerima dapat <b>melaporkan ke KPK</b> dalam <b>30 hari kerja</b> sejak diterima → Pasal 12B ayat (1) <b>tidak berlaku</b>.</p>
-          </div>
-        </div>
-        <div class="flow-step">
-          <div class="flow-num">4</div>
-          <div class="flow-content">
-            <h4>KPK Menetapkan Status</h4>
-            <p>Dalam <b>30 hari kerja</b> sejak laporan, KPK menetapkan gratifikasi menjadi <b>milik penerima</b> atau <b>milik negara</b>.</p>
-          </div>
-        </div>
-        <div class="flow-step">
-          <div class="flow-num">5</div>
-          <div class="flow-content">
-            <h4>Jika Tidak Dilaporkan / Terbukti Suap</h4>
-            <p>Dianggap suap → pidana <span class="danger">seumur hidup atau 4–20 tahun</span> + denda Rp200 jt – Rp1 M.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>⚖️ Alur Perampasan Harta (Pasal 38B)</h3>
-      <div class="flow">
-        <div class="flow-step">
-          <div class="flow-num">1</div>
-          <div class="flow-content"><h4>Dakwaan Pokok</h4><p>Terdakwa didakwa Pasal 2, 3, 4, 13–16 UU 31/1999 atau Pasal 5–12 UU ini.</p></div>
-        </div>
-        <div class="flow-step">
-          <div class="flow-num">2</div>
-          <div class="flow-content"><h4>Harta Belum Didakwakan</h4><p>Ada harta milik terdakwa yang belum didakwakan tapi diduga dari korupsi.</p></div>
-        </div>
-        <div class="flow-step">
-          <div class="flow-num">3</div>
-          <div class="flow-content"><h4>Terdakwa Wajib Buktikan Sebaliknya</h4><p>Diajukan saat pembelaan; dapat diulang di memori banding & kasasi.</p></div>
-        </div>
-        <div class="flow-step">
-          <div class="flow-num">4</div>
-          <div class="flow-content"><h4>Hakim Buka Sidang Khusus</h4><p>Hakim <b>wajib</b> membuka persidangan khusus untuk memeriksa pembuktian tersebut.</p></div>
-        </div>
-        <div class="flow-step">
-          <div class="flow-num">5</div>
-          <div class="flow-content"><h4>Putusan</h4><p>Gagal buktikan → harta <b>dirampas untuk negara</b> (seluruh/sebagian).<br>Dibebaskan/lepas → tuntutan perampasan <b>ditolak</b>.</p></div>
-        </div>
-        <div class="flow-step">
-          <div class="flow-num">6</div>
-          <div class="flow-content"><h4>Gugatan Perdata (Pasal 38C)</h4><p>Jika setelah inkracht masih ada harta tersembunyi → negara gugat perdata terpidana/ahli waris.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= PERALIHAN ================= -->
-  <section class="panel" id="peralihan">
-    <div class="card">
-      <h3>⏳ Ketentuan Peralihan (Pasal 43A)</h3>
-      <div style="overflow-x:auto">
-        <table>
-          <thead>
-            <tr><th>Waktu Korupsi</th><th>Dasar Hukum</th><th>Ketentuan Pidana</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><b>Sebelum UU 31/1999</b></td>
-              <td>UU 3/1971</td>
-              <td>Maksimum pidana yang menguntungkan terdakwa berlaku Pasal 5–10 UU ini & Pasal 13 UU 31/1999. <b>Minimum tidak berlaku.</b></td>
-            </tr>
-            <tr>
-              <td><b>Setelah UU 31/1999, sebelum UU ini</b></td>
-              <td>UU 31/1999</td>
-              <td>Untuk korupsi &lt; Rp5 juta, maksimum pidana berlaku Pasal 12A ayat (2) UU ini (maks. 3 tahun).</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="note green">Asas <b>lex favor reo</b> — Pasal 1 ayat (2) KUHP: ketentuan pidana yang menguntungkan terdakwa diberlakukan.</div>
-    </div>
-
-    <div class="card">
-      <h3>🚫 Pencabutan Pasal KUHP (Pasal 43B)</h3>
-      <p>Pasal KUHP yang <b>tidak berlaku lagi</b> sejak UU ini diundangkan:</p>
-      <p>
-        <span class="pill red">209</span><span class="pill red">210</span>
-        <span class="pill red">387</span><span class="pill red">388</span>
-        <span class="pill red">415</span><span class="pill red">416</span>
-        <span class="pill red">417</span><span class="pill red">418</span>
-        <span class="pill red">419</span><span class="pill red">420</span>
-        <span class="pill red">423</span><span class="pill red">425</span>
-        <span class="pill red">435</span>
-      </p>
-      <p style="font-size:.85rem;color:var(--muted)">jo. UU No. 1/1946 jo. UU No. 73/1958 jo. UU No. 27/1999.</p>
-    </div>
-  </section>
-
+<!-- ══ SOCIAL PROOF POPUP ══ -->
+<div class="sp-popup" id="spPopup">
+  <button class="sp-close" onclick="closeSp()" aria-label="Tutup">✕</button>
+  <div class="sp-av" id="spAv">RH</div>
+  <div>
+    <div class="sp-nm" id="spNm">Rudi Hartono</div>
+    <div class="sp-ac" id="spAc">baru saja mendaftar <strong>Pelatihan Online</strong></div>
+    <div class="sp-tm" id="spTm">2 menit lalu</div>
+  </div>
+  <span class="sp-dot"></span>
 </div>
 
-<footer>
-  📚 Sumber: UU RI No. 20 Tahun 2001 · LN 2001/134 · TLN 4150 · Disahkan 21 November 2001<br>
-  Dibuat untuk mempermudah pemahaman — bukan pengganti teks resmi.
-</footer>
-
 <script>
-  // ===== Tab Navigation =====
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.panel');
+/* ══════════ ACCORDION SILABUS ══════════ */
+function toggleSilabus(btn){
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
 
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.tab;
-      tabBtns.forEach(b => b.classList.remove('active'));
-      panels.forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById(target).classList.add('active');
-      // reset search saat pindah tab
-      document.getElementById('searchInput').value = '';
-      filterCards('');
-      window.scrollTo({top:0, behavior:'smooth'});
-    });
-  });
+/* ══════════ ACCORDION FAQ ══════════ */
+function toggleFaq(btn){
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
 
-  // ===== Search =====
-  const searchInput = document.getElementById('searchInput');
-  const noResult = document.getElementById('noResult');
+/* ══════════ COUNTDOWN KE HARI MINGGU TERDEKAT ══════════ */
+function nextSunday(){
+  const now = new Date();
+  const d = new Date(now);
+  d.setHours(23,59,59,999); // batas akhir hari Minggu
+  const day = d.getDay(); // 0=Minggu
+  const diff = (7 - day) % 7 || 7;
+  d.setDate(d.getDate() + diff);
+  return d;
+}
+function updateCountdown(){
+  const target = nextSunday();
+  const now = new Date();
+  let diff = target - now;
+  if(diff < 0) diff = 0;
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const mins = Math.floor((diff % 3600000) / 60000);
+  const pad = n => String(n).padStart(2,'0');
+  const set = (id,v) => { const el = document.getElementById(id); if(el) el.textContent = pad(v); };
+  set('cd-d', days); set('cd-h', hours); set('cd-m', mins);
+  set('cd-d2', days); set('cd-h2', hours); set('cd-m2', mins);
+}
+updateCountdown();
+setInterval(updateCountdown, 30000);
 
-  function filterCards(query){
-    const q = query.toLowerCase().trim();
-    const cards = document.querySelectorAll('#pasal .searchable');
-    let visible = 0;
-    cards.forEach(card => {
-      const text = (card.textContent + ' ' + (card.dataset.keywords||'')).toLowerCase();
-      const match = text.includes(q);
-      card.style.display = match ? '' : 'none';
-      if(match) visible++;
-    });
-    noResult.style.display = (q && visible === 0) ? 'block' : 'none';
-  }
+/* ══════════ REVEAL ON SCROLL ══════════ */
+const revealEls = document.querySelectorAll('.sec, .kenapa-card, .prep-item, .testi-card, .card-free, .card-online, .card-offline, .final');
+revealEls.forEach(el => el.classList.add('reveal'));
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+revealEls.forEach(el => io.observe(el));
 
-  searchInput.addEventListener('input', e => {
-    const q = e.target.value;
-    // otomatis pindah ke tab pasal saat mengetik
-    if(q.trim()){
-      const pasalBtn = document.querySelector('.tab-btn[data-tab="pasal"]');
-      if(!pasalBtn.classList.contains('active')){
-        tabBtns.forEach(b => b.classList.remove('active'));
-        panels.forEach(p => p.classList.remove('active'));
-        pasalBtn.classList.add('active');
-        document.getElementById('pasal').classList.add('active');
-      }
-    }
-    filterCards(q);
-  });
+/* ══════════ SOCIAL PROOF POPUP ══════════ */
+const spData = [
+  { av:'RH', c:'tav-g', n:'Rudi Hartono', a:'baru saja mendaftar <strong>Pelatihan Online</strong>', t:'2 menit lalu' },
+  { av:'SR', c:'tav-a', n:'Sari Rahayu', a:'baru saja bertanya via <strong>WhatsApp Gratis</strong>', t:'5 menit lalu' },
+  { av:'AP', c:'tav-t', n:'Agus Priyanto', a:'baru saja mendaftar <strong>Pelatihan Online</strong>', t:'8 menit lalu' },
+  { av:'BW', c:'tav-r', n:'Bambang Widodo', a:'baru saja mendaftar <strong>Mini Pelatihan</strong>', t:'12 menit lalu' },
+  { av:'AN', c:'tav-p', n:'Asep Nugraha', a:'baru saja mendaftar <strong>Pelatihan Online</strong>', t:'15 menit lalu' },
+  { av:'RF', c:'tav-b', n:'Rizky Fadillah', a:'baru saja bertanya via <strong>WhatsApp Gratis</strong>', t:'20 menit lalu' }
+];
+let spIdx = 0;
+let spTimer = null;
+function showSp(){
+  const p = document.getElementById('spPopup');
+  const d = spData[spIdx % spData.length];
+  const av = document.getElementById('spAv');
+  av.textContent = d.av;
+  av.className = 'sp-av ' + d.c;
+  document.getElementById('spNm').textContent = d.n;
+  document.getElementById('spAc').innerHTML = d.a;
+  document.getElementById('spTm').textContent = d.t;
+  p.classList.add('sp-show');
+  spIdx++;
+  clearTimeout(spTimer);
+  spTimer = setTimeout(() => p.classList.remove('sp-show'), 6000);
+  setTimeout(showSp, 12000);
+}
+setTimeout(showSp, 6000);
+function closeSp(){
+  document.getElementById('spPopup').classList.remove('sp-show');
+}
 </script>
-
 </body>
 </html>
